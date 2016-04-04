@@ -150,7 +150,7 @@ class GearmanWorkerExecuteCommand extends AbstractGearmanCommand
         /**
          * @var DialogHelper $dialog
          */
-        $dialog = $this
+        if (!$input->getOption('no-interaction')) $dialog = $this
             ->getHelperSet()
             ->get('dialog');
 
